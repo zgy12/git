@@ -62,7 +62,6 @@ $ git stash pop                                         // 回到最新的stash�
 $ git stash clear                                       // 清除所有stash
 $ git checkout <stash@{n}> -- <file-path>               //从stash中获取某个文件的修改
 $ git checkout .                                        // 放弃所有修改
-$ 
 ```
 ## 仓库修改
 ```
@@ -92,3 +91,5 @@ $ git log --pretty=oneline --graph --decorate --all     // 展示简化的commit
 $ git bundle create <file> <branch name>                // 将分支导出成一个文件
 $ git log --all --grep='<given-text>'                   // 通过grep查找commit信息
 ```
+
+**如有总结不当之处，请指正， 谢谢！**
