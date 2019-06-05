@@ -49,7 +49,7 @@ X: 未知状态(很可能是遇到git的bug了，你可以向git提交bug report
 ```
 $ git fetch --all && git reset --hard origin/master     // 抛弃本地所有的修改，回到远程仓库的状态 master 分支。
 $ git update-ref --d HEAD                               // 重设第一个 commit
-$ git diff <commit-if><commit-id>/[--cached]/ [HEAD]    //展示工作区和暂存区的不同
+$ git diff <commit-if><commit-id>/[--cached]/ [HEAD]    // 展示工作区和暂存区的不同
 $ git reset --soft <commit-id>/ HEAD                    // 代码回退到指定commit或远程，不删除本地修改
 $ git reset <file-name>                                 // 将暂存区的文件放到工作区
 $ git stash [save msg]                                  // 将本地修改放到暂存区[添加说明]
@@ -60,7 +60,7 @@ $ git stash apply <stash@{n}>                           // 回到指定的stash�
 $ git stash drop <stash@{n}>                            // 删除指定的stash状态
 $ git stash pop                                         // 回到最新的stash状态，并删除这个stash
 $ git stash clear                                       // 清除所有stash
-$ git checkout <stash@{n}> -- <file-path>               //从stash中获取某个文件的修改
+$ git checkout <stash@{n}> -- <file-path>               // 从stash中获取某个文件的修改
 $ git checkout .                                        // 放弃所有修改
 ```
 ## 仓库修改
@@ -82,6 +82,7 @@ $ git remote set-url origin <new-url>                   // 修改远程仓库地
 $ git whatchanged --since='2 week ago'                  // 查看两周内的修改
 $ git pull                                              // 拉取最新代码
 $ git push                                              // 提交
+$ git push -u origin <branch name>                      // 关联远程分支并提交
 ```
 ## git commit 提交
 ```
