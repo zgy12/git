@@ -92,5 +92,20 @@ $ git log --pretty=oneline --graph --decorate --all     // 展示简化的commit
 $ git bundle create <file> <branch name>                // 将分支导出成一个文件
 $ git log --all --grep='<given-text>'                   // 通过grep查找commit信息
 ```
+## 撤销提交
+```
+$ git reset --hard HEAD^　　　　　　　　　　                // 撤销到上一个提交以前状态
+$ git rest --hard <commitid>                            // 将版本回退到指定commitid，删除修改
+$ git reset --soft HEAD^                                // 撤销到上一个提交以前状态， 保留修改
+$ git reset --soft <commitid>                           // 将版本回退到指定commitid版，保留修改
+```
+## 救命稻草
+如果你不小心删了stash上没有应用到的有用的代码。那么，不要慌,你还可以抓一下git fsck 这根救命稻草
+```
+$ git fsck —lost-found                                  // 查看stash id(dangling commit 后面的hash串) dangling commit 1761069e0d0034f9f7d54f753e15a95cd226653f
+$ git show 1761069e0d0034f9f7d54f753e15a95cd226653f     // 查看修改信息，
+$ git merge 1761069e0d0034f9f7d54f753e15a95cd226653f    // 
+
+```
 
 **如有总结不当之处，请指正， 谢谢！**
