@@ -100,12 +100,11 @@ $ git reset --soft HEAD^                                // 撤销到上一个�
 $ git reset --soft <commitid>                           // 将版本回退到指定commitid版，保留修改
 ```
 ## 救命稻草
-如果你不小心删了stash上没有应用到的有用的代码。**不要慌，冷静！！！**你还可以抓一下`git fsck —lost-found`这根救命稻草， 
+如果你不小心删了stash上没有应用到的有用的代码。 **不要慌，冷静！！！** 你还可以抓一下 `git fsck —lost-found` 这根救命稻草， 
 ```
 $ git fsck —lost-found                                  // 查看stash id(dangling commit 后面的hash串) dangling commit 1761069e0d0034f9f7d54f753e15a95cd226653f
-$ git show <stashid>                                    // 查看修改信息，找到你想要的shash id ，（最新提交的）
-$ git merge <stashid>                                   // 找回你的stash的代码，喝杯咖啡冷静一下。。。。
-
+$ git show <stashid>                                    // 查看修改信息，找到你想要的 shashid 
+$ git merge <stashid>                                   // 找回你想要的stash的代码，此时你的代码就被merge到本地仓库了，喝杯咖啡冷静一下。。。。
 ```
 
 **如有总结不当之处，请指正， 谢谢！**
